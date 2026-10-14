@@ -1,0 +1,29 @@
+# Secrets & credentials
+*.json
+!package.json
+!tsconfig.json
+.env
+.env.*
+*.pem
+*.key
+wallet*.json
+key*.json
+jwk*.json
+
+# Dependencies & build
+node_modules/
+dist/
+build/
+.turbo/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
