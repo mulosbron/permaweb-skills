@@ -12,24 +12,24 @@ Copy the folder where your agent looks for `AGENTS.md` (project or global agents
 cp -r permaweb-skills/ my-project/.agents/
 ```
 
-Agents that read `AGENTS.md` (Claude Code, Codex, Cursor, Windsurf and others) get the skill table and load individual `SKILL.md` files on demand. References under `*/references/` load only when a skill points to them.
+Agents that read `AGENTS.md` (Claude Code, Codex, Cursor, Windsurf and others) get the skill table and load individual `SKILL.md` files on demand. References under `skills/*/references/` load only when a skill points to them.
 
 ## Skills
 
 | Skill | Use it for |
 |---|---|
-| `arweave-core/` | Stack overview, units, tags, manifests, normalized addresses, glossary |
-| `turbo-upload/` | Turbo SDK/CLI/API uploads, credits, x402, browser setup |
-| `arweave-data-access/` | Gateway HTTP API, GraphQL, verification, sandboxing |
-| `wayfinder/` | `ar://` routing and verification (core + React) |
-| `arns/` | Names, ANTs, records, undernames, pricing |
-| `ario-sdk/` | `@ar.io/sdk` on Solana: gateways, staking, vaults, epochs, token |
-| `ario-gateway-operator/` | Running ar-io-node: env, filters, OIP, sidecars, troubleshooting |
-| `arfs/` | ArFS entities, drive state, private drives, v0.15 upgrade |
-| `aos-processes/` | Lua processes with aos: handlers, messaging, modules |
-| `aoconnect/` | JS client for AO messages, spawns, assignments |
-| `ao-blueprints/` | Token spec and blueprints, games and bots |
-| `hyperbeam/` | AO-Core paths, devices, `~patch@1.0` reads, node operation |
+| `skills/arweave-core/` | Stack overview, units, tags, manifests, normalized addresses, glossary |
+| `skills/turbo-upload/` | Turbo SDK/CLI/API uploads, credits, x402, browser setup |
+| `skills/arweave-data-access/` | Gateway HTTP API, GraphQL, verification, sandboxing |
+| `skills/wayfinder/` | `ar://` routing and verification (core + React) |
+| `skills/arns/` | Names, ANTs, records, undernames, pricing |
+| `skills/ario-sdk/` | `@ar.io/sdk` on Solana: gateways, staking, vaults, epochs, token |
+| `skills/ario-gateway-operator/` | Running ar-io-node: env, filters, OIP, sidecars, troubleshooting |
+| `skills/arfs/` | ArFS entities, drive state, private drives, v0.15 upgrade |
+| `skills/aos-processes/` | Lua processes with aos: handlers, messaging, modules |
+| `skills/aoconnect/` | JS client for AO messages, spawns, assignments |
+| `skills/ao-blueprints/` | Token spec and blueprints, games and bots |
+| `skills/hyperbeam/` | AO-Core paths, devices, `~patch@1.0` reads, node operation |
 
 ## Example prompts
 
@@ -57,25 +57,33 @@ Agents that read `AGENTS.md` (Claude Code, Codex, Cursor, Windsurf and others) g
 
 ```text
 permaweb-skills/
+├── .claude-plugin/
+│   └── plugin.json           # Claude Code plugin manifest
+├── .codex-plugin/
+│   └── plugin.json           # OpenAI Codex plugin manifest
 ├── AGENTS.md                 # skill table, how to work, cross-cutting rules, boundaries
+├── CLAUDE.md                 # Claude Code entrypoint (@AGENTS.md)
 ├── README.md
+├── gemini-extension.json     # Gemini CLI extension manifest
+├── plugin.json               # Antigravity plugin manifest
 ├── _source/
 │   ├── permaweb-docs-2026-10-13.llms.txt   # full snapshot (1.2 MB)
 │   └── doc-index.md          # doc no → title → lines → source URL, grouped by skill
 ├── tools/
 │   └── docslice.py           # print docs by number, --find term, --list
-├── arweave-core/             # SKILL.md + references/{glossary,bundles-and-tags,manifests,addresses-and-signers}.md
-├── turbo-upload/             # references/{sdk-clients,browser-setup,credits-and-payments,rest-api,advanced-uploading}.md
-├── arweave-data-access/      # references/{graphql,gateway-api,verification-and-sandboxing}.md
-├── wayfinder/                # references/{core,react}.md
-├── arns/                     # references/{ants-and-records,registration-and-pricing}.md
-├── ario-sdk/                 # references/{api-surface,token}.md
-├── ario-gateway-operator/    # references/{environment-variables,operations,extensions,network-and-oip}.md
-├── arfs/                     # references/{entity-types,privacy-and-upgrades}.md
-├── aos-processes/            # references/{handlers-and-messaging,modules,lua-and-cli,concepts,weavedrive-sqlite}.md
-├── aoconnect/                # references/api.md
-├── ao-blueprints/            # references/{token-spec,blueprints,bots-and-games}.md
-└── hyperbeam/                # references/{pathing-and-devices,node-operation}.md
+└── skills/
+    ├── arweave-core/             # SKILL.md + references/{glossary,bundles-and-tags,manifests,addresses-and-signers}.md
+    ├── turbo-upload/             # SKILL.md + references/{sdk-clients,browser-setup,credits-and-payments,rest-api,advanced-uploading}.md
+    ├── arweave-data-access/      # SKILL.md + references/{graphql,gateway-api,verification-and-sandboxing}.md
+    ├── wayfinder/                # SKILL.md + references/{core,react}.md
+    ├── arns/                     # SKILL.md + references/{ants-and-records,registration-and-pricing}.md
+    ├── ario-sdk/                 # SKILL.md + references/{api-surface,token}.md
+    ├── ario-gateway-operator/    # SKILL.md + references/{environment-variables,operations,extensions,network-and-oip}.md
+    ├── arfs/                     # SKILL.md + references/{entity-types,privacy-and-upgrades}.md
+    ├── aos-processes/            # SKILL.md + references/{handlers-and-messaging,modules,lua-and-cli,concepts,weavedrive-sqlite}.md
+    ├── aoconnect/                # SKILL.md + references/api.md
+    ├── ao-blueprints/            # SKILL.md + references/{token-spec,blueprints,bots-and-games}.md
+    └── hyperbeam/                # SKILL.md + references/{pathing-and-devices,node-operation}.md
 ```
 
 ## Known gaps in the snapshot

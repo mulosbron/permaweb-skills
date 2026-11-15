@@ -2,6 +2,10 @@
 *.json
 !package.json
 !tsconfig.json
+!plugin.json
+!.claude-plugin/plugin.json
+!.codex-plugin/plugin.json
+!gemini-extension.json
 .env
 .env.*
 *.pem

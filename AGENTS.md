@@ -4,18 +4,18 @@ Skills for building on the permaweb: storing data on Arweave, reading and naming
 
 | Skill | Read when |
 |---|---|
-| `arweave-core/SKILL.md` | Unsure which layer applies; units (Winston, winc, mARIO); tags; path manifests; ETH/Solana owner addresses. Entry point. |
-| `turbo-upload/SKILL.md` | Uploading files, folders or sites; Turbo credits, top-ups, x402; browser bundler setup. |
-| `arweave-data-access/SKILL.md` | Fetching bytes from gateways; GraphQL queries by tag/owner; gateway HTTP API. |
-| `wayfinder/SKILL.md` | Reading via `ar://` across many gateways with verification; replacing `arweave.net` links. |
-| `arns/SKILL.md` | Human-readable names, ANT records, undernames, deploy-time pointer updates, primary names. |
-| `ario-sdk/SKILL.md` | `@ar.io/sdk` on Solana: gateways, staking, vaults, epochs, ARIO token, program ids. |
-| `ario-gateway-operator/SKILL.md` | Running or debugging an ar.io gateway (ar-io-node), filters, observer, joining the network. |
-| `arfs/SKILL.md` | File-system data on Arweave (ArDrive protocol): drives, folders, files, private drives. |
-| `aos-processes/SKILL.md` | Writing AO processes in Lua with aos; handlers, messaging, modules. |
-| `aoconnect/SKILL.md` | JS/TS apps sending messages to, spawning or assigning AO processes. |
-| `ao-blueprints/SKILL.md` | AO tokens (standard token spec), chatroom/staking/voting/arena blueprints, bots. |
-| `hyperbeam/SKILL.md` | Reading AO state over HTTP, `~patch@1.0`, AO-Core paths and devices, running a HyperBEAM node. |
+| `skills/arweave-core/SKILL.md` | Unsure which layer applies; units (Winston, winc, mARIO); tags; path manifests; ETH/Solana owner addresses. Entry point. |
+| `skills/turbo-upload/SKILL.md` | Uploading files, folders or sites; Turbo credits, top-ups, x402; browser bundler setup. |
+| `skills/arweave-data-access/SKILL.md` | Fetching bytes from gateways; GraphQL queries by tag/owner; gateway HTTP API. |
+| `skills/wayfinder/SKILL.md` | Reading via `ar://` across many gateways with verification; replacing `arweave.net` links. |
+| `skills/arns/SKILL.md` | Human-readable names, ANT records, undernames, deploy-time pointer updates, primary names. |
+| `skills/ario-sdk/SKILL.md` | `@ar.io/sdk` on Solana: gateways, staking, vaults, epochs, ARIO token, program ids. |
+| `skills/ario-gateway-operator/SKILL.md` | Running or debugging an ar.io gateway (ar-io-node), filters, observer, joining the network. |
+| `skills/arfs/SKILL.md` | File-system data on Arweave (ArDrive protocol): drives, folders, files, private drives. |
+| `skills/aos-processes/SKILL.md` | Writing AO processes in Lua with aos; handlers, messaging, modules. |
+| `skills/aoconnect/SKILL.md` | JS/TS apps sending messages to, spawning or assigning AO processes. |
+| `skills/ao-blueprints/SKILL.md` | AO tokens (standard token spec), chatroom/staking/voting/arena blueprints, bots. |
+| `skills/hyperbeam/SKILL.md` | Reading AO state over HTTP, `~patch@1.0`, AO-Core paths and devices, running a HyperBEAM node. |
 
 Source snapshot: `_source/permaweb-docs-2026-10-13.llms.txt` (232 documents). `_source/doc-index.md` maps every document to its skill. `python tools/docslice.py <No> | --find <term> | --list` prints documents from it.
 
